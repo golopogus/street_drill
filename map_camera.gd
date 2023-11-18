@@ -1,7 +1,0 @@
-extends Camera2D
-
-
-	
-		
-	
-	

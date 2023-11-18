@@ -95,11 +95,6 @@ func _on_button_41099_pressed():
 		boxes.append(41099)
 
 
-func _on_button_pressed():
-	Globals.handle_start(boxes)
-	get_tree().change_scene_to_file("res://find_it.tscn")
-
-
 func _on_button_2_pressed():
 	Globals.handle_start(boxes)
 	get_tree().change_scene_to_file("res://street_drill.tscn")

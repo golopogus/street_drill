@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://street_drill.gd" id="1_xltty"]
 [ext_resource type="Texture2D" uid="uid://cwn8fswjl2do2" path="res://banner.png" id="2_2y7f8"]
 [ext_resource type="Texture2D" uid="uid://cgi4yjepe5kms" path="res://streets/41000/carey_park_lane.png" id="2_gmb6n"]
-[ext_resource type="FontFile" uid="uid://tfi382u2oie8" path="res://CherryBombOne-Regular.ttf" id="3_0yifk"]
 [ext_resource type="Texture2D" uid="uid://20uvh48honwk" path="res://streets/41000/madison_watch_way.png" id="3_82pbd"]
+[ext_resource type="FontFile" uid="uid://qdqpkxcpn458" path="res://Instruction.otf" id="3_omjxg"]
 [ext_resource type="Texture2D" uid="uid://dretynns2iurv" path="res://streets/41000/signal_knob_court.png" id="4_5y7a2"]
 [ext_resource type="Texture2D" uid="uid://debwsot4shhtp" path="res://streets/41000/powell_lane.png" id="5_mwdwu"]
 [ext_resource type="Texture2D" uid="uid://bda6o1aq5a4o3" path="res://streets/41000/pinetree_terrace.png" id="6_rc5kb"]
@@ -270,7 +270,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fpy52"]
 
-[node name="street_drill" type="Node2D"]
+[node name="street_drill_only" type="Node2D"]
 script = ExtResource("1_xltty")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -278,30 +278,35 @@ scale = Vector2(0.3, 0.3)
 transform = Transform2D(0.3, 0, 0, 0.3, 0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+visible = false
 position = Vector2(1711.88, 460)
 scale = Vector2(2.97128, 1.53292)
 texture = ExtResource("2_2y7f8")
 
 [node name="street_label" type="Label" parent="CanvasLayer"]
-modulate = Color(0.898039, 1, 0, 1)
-offset_left = 617.0
-offset_top = -3.0
-offset_right = 4596.0
-offset_bottom = 287.0
-scale = Vector2(0.5, 0.5)
-theme_override_fonts/font = ExtResource("3_0yifk")
-theme_override_font_sizes/font_size = 200
+offset_top = 75.0
+offset_right = 3407.0
+offset_bottom = 365.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 75
+theme_override_fonts/font = ExtResource("3_omjxg")
+theme_override_font_sizes/font_size = 100
+text = "ss"
 horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 80.0
-offset_top = 1626.67
-offset_right = 643.0
-offset_bottom = 1896.67
-theme_override_fonts/font = ExtResource("3_0yifk")
-theme_override_font_sizes/font_size = 200
+offset_left = 50.0
+offset_top = 1723.33
+offset_right = 613.0
+offset_bottom = 1993.33
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 75
+theme_override_fonts/font = ExtResource("3_omjxg")
+theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxEmpty_bjry3")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_jsg0u")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_p6uhj")
@@ -310,6 +315,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_fpy52")
 text = "exit"
 
 [node name="map" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2.08165e-12, 2.08165e-12)
 texture = ExtResource("1_1yga1")
 
